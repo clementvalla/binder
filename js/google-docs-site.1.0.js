@@ -38,7 +38,6 @@ $(function() {
 
 		$('#menu-open').click(function(){
 			$("#navigation").toggle();
-			$(".about").toggle();
 			$("#menu").toggleClass("border");
 		});
 
