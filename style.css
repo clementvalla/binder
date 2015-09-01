@@ -57,10 +57,8 @@ div#menu {
 }
 
 img#logo {
-	left: 20px;
-	top: 80px;
 	z-index: 20;
-	padding-left: 5px;
+	padding-left: 0px;
 	border-bottom-style: solid;
 	border-bottom-width: 0px;
 	width: 160px;
@@ -88,13 +86,13 @@ ul#navigation a, div.about{
 	text-decoration: none;
 }
 ul#navigation a.active{
-	color: black;
+	color: red;
 }
 ul#navigation a:hover{
 	color: red;
 }
 ul#navigation .current_page_item a {
-	color: black;
+	color: red;
 	text-decoration: line-through;
 }
 
