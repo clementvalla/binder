@@ -47,8 +47,11 @@ div#menu {
 	letter-spacing: .01em;
 	z-index:10;
 	background-color: blue;
-	padding: 10px;
-	font: 12px/16px "Courier New", Courier, mono;
+	padding: 15px;
+	padding-top: 20px;
+	font: 14px/18px "Courier New", Courier, mono;
+	font-family: monospace;
+    letter-spacing: -0.3px;
 	box-shadow: #fefb00 5px 5px 0,  10px 10px 0px #ff0000;
 	cursor: move;
 }
@@ -60,7 +63,17 @@ img#logo {
 	padding-left: 5px;
 	border-bottom-style: solid;
 	border-bottom-width: 0px;
-	width: 200px;
+	width: 160px;
+}
+
+img#binder-clip{
+	margin-top: -38px;
+    position: fixed;
+    margin-left: 80px;
+    z-index: 20;
+    -ms-transform: rotate(-27deg);
+    -webkit-transform: rotate(-27deg);
+    transform: rotate(-27deg);
 }
 
 ul#navigation {
@@ -71,16 +84,14 @@ ul#navigation {
 
 ul#navigation a, div.about{
 	color: white;
-	padding: 2px;
-	padding-left: 5px;
+	padding: 0;
 	text-decoration: none;
-	width: 200px;
 }
 ul#navigation a.active{
 	color: black;
 }
 ul#navigation a:hover{
-	color: black;
+	color: red;
 }
 ul#navigation .current_page_item a {
 	color: black;
@@ -88,16 +99,19 @@ ul#navigation .current_page_item a {
 }
 
 div.about{
-	font: 11px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	bottom: 15px;
-	left: 15px;
+	font-family: helvetica;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    line-height: 18px;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.8);
 	z-index: 90;
-	
+	max-width: 200px;
 }
 
 
 /* @group mobile */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 720px) {
 	div#background-site{
 		-webkit-overflow-scrolling:touch; 
 		overflow:auto;

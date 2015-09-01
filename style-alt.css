@@ -43,6 +43,9 @@ img#logo {
 	top: 20px;
 	z-index: 20;
 }
+img#binder-clip{
+	display: none;
+}
 
 div#menu {
 	position: fixed;
