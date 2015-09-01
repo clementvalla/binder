@@ -1,0 +1,156 @@
+/* @override http://thisisourwork.net/binder/style.css */
+
+/* @override http://thisisourwork.net/binder/style.css */
+
+
+/*
+Binder
+Author: Clement Valla
+Version: 1.0
+*/
+
+ *{
+ 	margin: 0;
+	padding: 0;
+ }
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 900px;
+}
+
+div#background-site {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index:1;
+}
+
+div#background-site iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	overflow: scroll;
+}
+
+div#menu {
+	position: fixed;
+	left: 20px;
+	top: 148px;
+	color: white;
+	letter-spacing: .01em;
+	z-index:10;
+	background-color: blue;
+	padding: 10px;
+	font: 12px/16px "Courier New", Courier, mono;
+	box-shadow: #fefb00 5px 5px 0,  10px 10px 0px #ff0000;
+	cursor: move;
+}
+
+img#logo {
+	left: 20px;
+	top: 80px;
+	z-index: 20;
+	padding-left: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	width: 200px;
+}
+
+ul#navigation {
+	margin: 0px;
+	margin-bottom: 20px;
+	list-style-type: none;
+}
+
+ul#navigation a, div.about{
+	color: white;
+	padding: 2px;
+	padding-left: 5px;
+	text-decoration: none;
+	width: 200px;
+}
+ul#navigation a.active{
+	color: black;
+}
+ul#navigation a:hover{
+	color: black;
+}
+ul#navigation .current_page_item a {
+	color: black;
+	text-decoration: line-through;
+}
+
+div.about{
+	font: 11px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	bottom: 15px;
+	left: 15px;
+	z-index: 90;
+	
+}
+
+
+/* @group mobile */
+@media only screen and (max-width: 960px) {
+	div#background-site{
+		-webkit-overflow-scrolling:touch; 
+		overflow:auto;
+	}
+	div#background-site iframe{
+		width: 100%;
+		height: 5500px;
+		overflow: hidden;
+	}
+	div#menu {
+		position: fixed;
+		min-width: 200px;
+		width:95%;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 10px;
+		z-index:10;
+		left: 2px;
+		top: 2px;
+	}
+	img#logo{
+		position: absolute;
+		left:50%;
+		top:10px;
+		margin-left: -80px;
+		width:160px;
+		margin: left:10%;
+	}
+	ul#navigation{
+		display: none;
+		text-indent: -1.5em;
+		margin-left:1.5em; 
+	}
+	div#menu-open{
+		width: 30px;
+		height: 35px;
+		cursor: pointer;
+	}
+	div#menu-open div {
+	    background-color: white;
+	    border: 1px solid blue;
+	    border-radius: 2px 2px 2px 2px;
+	    height: 18%;
+	    margin-bottom: 12%;
+	    width: 90%;
+	}
+	.border{
+		border-style: solid;
+		border-width: 1px;
+	}
+	div.about{
+		width: auto;
+		display: none;
+	}
+}
+/* @end */

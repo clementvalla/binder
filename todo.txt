@@ -1,0 +1,13 @@
+Things todo on the website:
+logo?
+favicon
+css ok?
+readme.txt file
+download link (zip file? background image?)
+add explanation of iframes and links to sites explaining iframes
+add an explanation that links on pages will remain inside the iframe
+
+TO DO Programming:
+css for mobile version
+add page name to <body> as a class for page-specific CSS
+
