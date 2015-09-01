@@ -15,12 +15,8 @@ $(function() {
 		//create the title
 		document.title = data.title; 
 		
-		//create the menu
-		var menu = $('<div id="menu">');
-		var menuopen = $('<div id="menu-open">');
-		menuopen.html('<div></div><div></div><div></div>');
-		menuopen.appendTo(menu);
-		var links = $('<ul id="navigation">');
+		//create the navigation
+		var links = $('#navigation');
 		for (var property in data.menu) {
     		if (data.menu.hasOwnProperty(property)) {
     			var urlsafe = property.replace(/ /gi, '-');
@@ -32,27 +28,10 @@ $(function() {
         		var bk = data.menu[property];
     		}
 		}
-		links.appendTo(menu);
-
-		//create the logo
-		var img = $('<img id="logo">'); //Equivalent: $(document.createElement('img'))
-		img.attr('src', data.logo);
-		img.prependTo(menu);
 
 		//create the about section
-		var about = $('<div class="about">');
+		var about = $('.about');
 		about.html(data.about);
-		about.appendTo(menu);
-
-		menu.appendTo('body');
-
-		
-
-		//create the background
-		var background = $('<div id="background-site">');
-		var iframe = $('<iframe name="backgrnd" id="backgrnd" scrolling="yes">');
-		iframe.appendTo(background);
-		background.appendTo('body');
 
 		//load the google doc
 		locationHashChanged();
@@ -73,9 +52,6 @@ $(function() {
 
 function locationHashChanged() {
 	var item = window.location.hash;
-	// if ( $.browser.webkit == true ) {
- //        item = window.location.href;
- //    }
 	item = item.replace('#','');
 	$('li a').removeClass('active');
 	if (siteData.menu.hasOwnProperty(item)){
