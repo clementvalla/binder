@@ -76,8 +76,16 @@ img#binder-clip{
 
 ul#navigation {
 	margin: 0px;
+	margin-top: 15px;
 	margin-bottom: 20px;
+	padding:0;
 	list-style-type: none;
+}
+
+ul#navigation li{
+	padding:0;
+	margin:0;
+	width:auto;
 }
 
 ul#navigation a, div.about{
@@ -93,7 +101,6 @@ ul#navigation a:hover{
 }
 ul#navigation .current_page_item a {
 	color: red;
-	text-decoration: line-through;
 }
 
 div.about{
@@ -104,7 +111,7 @@ div.about{
     z-index: 100;
     color: rgba(255, 255, 255, 0.8);
 	z-index: 90;
-	max-width: 200px;
+	max-width: 180px;
 }
 
 
@@ -121,7 +128,6 @@ div.about{
 	}
 	div#menu {
 		position: fixed;
-		min-width: 200px;
 		width:95%;
 		font-size: 14px;
 		line-height: 18px;
