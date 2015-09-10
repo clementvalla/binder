@@ -20,4 +20,4 @@ It allows users to make a website by connecting a series of web pages into one h
 - Github
 
 # Questions 
-Please direct any questions about Binder to: info@thisisourwo
+Please direct any questions about Binder to: info@thisisourwork.net
