@@ -65,7 +65,9 @@ $(function() {
 function locationHashChanged() {
 	var item = window.location.hash;
 	item = item.replace('#','');
+	item = decodeURI(item);//thanks Eran! 
 	$('li a').removeClass('active');
+
 	if (siteData.menu.hasOwnProperty(item)){
 		$('#backgrnd').attr('src', siteData.menu[item]);
 		var urlsafe = item.replace(/ /gi, '-');
