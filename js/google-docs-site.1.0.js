@@ -5,12 +5,11 @@ $(function() {
 	//load the json
 	$.get( "info.json", function( data ) {
 
-		//this line of code broke the site in a host but not in dropbox
-		//data = jQuery.parseJSON( data);
+		//did it load json data as string or as an object?
+		if (typeof data == "string")
+			data = $.parseJSON(data);
 
 		siteData = data;
-
-		console.log(data.menu);
 
 		//create the title
 		document.title = data.title; 
