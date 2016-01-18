@@ -130,7 +130,8 @@ div.about{
 	}
 	div#menu {
 		position: fixed;
-		width:95%;
+		width:100%;
+        box-sizing: border-box;
 		font-size: 16px;
 		line-height: 22px;
 		padding: 10px;
