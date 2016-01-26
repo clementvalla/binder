@@ -48,6 +48,9 @@ $(function() {
     // and reset it gracefully when transitioning to narrower views
     // 768 matches the CSS mobile breakpoint, if you change it here
     // change it in the CSS as well. Thanks!
+    //
+    // N.B. If touch-punch is imported, this doesn't prevent moving the menu
+    // around on touch devices. If you don't like that remove touch-punch.
     $(window).resize(function() {
         if(window.innerWidth < 768) {
             $("#menu").draggable('disable').attr('style','');
