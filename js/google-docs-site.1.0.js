@@ -40,23 +40,32 @@ $(function() {
 			$("#menu").toggleClass("border");
 		});
 
-		$( "#menu" ).draggable({ cancel: "li" });
+		$("#menu").draggable({ cancel: "li" });
     	// $( "div, p" ).disableSelection();
 	});
+
+    // Keep navigation from getting borked when dragged on wider views
+    // and reset it gracefully when transitioning to narrower views
+    // 768 matches the CSS mobile breakpoint, if you change it here
+    // change it in the CSS as well. Thanks!
+    //
+    // N.B. If touch-punch is imported, this doesn't prevent moving the menu
+    // around on touch devices. If you don't like that remove touch-punch.
+    $(window).resize(function() {
+        if(window.innerWidth < 768) {
+            $("#menu").draggable('disable').attr('style','');
+        } else if(window.innerWidth > 768) {
+            $("#menu").draggable('enable');
+            $("#navigation").attr('style','');
+        };
+    });
 	
 	//little fix for the iframe size on mobile
 	//mobile hack
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		mobile = true;
-
- 		//setup the iframe width resize
-		$("iframe").css( "width",$(window).width()-50+"px" );
-		$("#menu").css( "width",$(window).width()-30+"px" );
-		$( window ).resize(function() {
-	  		$("iframe").css( "width",$(window).width()-50+"px" );
-	  		$("#menu").css( "width",$(window).width()-30+"px" );
-		});
-
+        // Add body class to target styles for touch devices with CSS
+        $('body').addClass('touch-device');
 	}
 
 });

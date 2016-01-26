@@ -4,7 +4,7 @@ Author: Clement Valla
 Version: 1.0
 */
 
- *{
+*{
  	margin: 0;
 	padding: 0;
  }
@@ -17,24 +17,23 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	min-width: 900px;
 }
 
-div#background-site {
+#background-site {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	z-index:1;
 }
 
-div#background-site iframe {
+#background-site iframe {
 	width: 100%;
 	height: 100%;
 	border: none;
 	overflow: scroll;
 }
 
-div#menu {
+#menu {
 	position: fixed;
 	left: 10px;
 	top: 40%;
@@ -52,15 +51,24 @@ div#menu {
 	background-color: #eee;
 }
 
-img#logo {
+#logo {
 	z-index: 20;
 	position: fixed;
 	right: 70px;
 	top: 60px;
 	width: 300px;
 }
+    #logo-touch {
+        display: none;
+		position: absolute;
+		left:50%;
+		top:4px;
+		margin-left: -80px;
+		width:160px;
+		margin: left:10%;
+    }
 
-img#binder-clip{
+#binder-clip{
 	margin-top: -38px;
     position: fixed;
     margin-left: 80px;
@@ -70,35 +78,35 @@ img#binder-clip{
     transform: rotate(-27deg);
 }
 
-ul#navigation {
+#navigation {
 	margin: 0;
 	padding:0;
 	list-style-type: none;
 }
 
-ul#navigation li{
+#navigation li{
 	padding:0;
 	margin:0;
 	width:auto;
 }
 
-ul#navigation a, div.about{
+#navigation a, div.about{
 	color: #717171;
 	padding: 0;
 	text-decoration: none;
 	padding: 1px;
 }
-ul#navigation a.active{
+#navigation a.active{
 	color: #000;
 }
-ul#navigation a:hover{
+#navigation a:hover{
 	color: #000;
 }
-ul#navigation .current_page_item a {
+#navigation .current_page_item a {
 	color: red;
 }
 
-div.about{
+.about{
 	position: fixed;
 	font-family: courier;
     letter-spacing: 0.5px;
@@ -112,25 +120,64 @@ div.about{
 	top: 155px;
 }
 
+/* Psuedo mobile styles for wide touch devices */
+    .touch-device #menu {
+        position: fixed;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 10px;
+        z-index:10;
+        left: 2px;
+        right: 2px;
+        top: 2px;
+    }
 
-/* @group mobile */
-@media only screen and (max-width: 720px) {
+	.touch-device #logo{
+        display: none;
+	}
+	.touch-device #logo-touch{
+        display: block;
+    }
+	.touch-device #navigation{
+		display: none;
+		text-indent: -1.5em;
+		margin-left:1.5em;
+		margin-top: 20px;
+	}
+	.touch-device #menu-open{
+		width: 30px;
+		height: 35px;
+		cursor: pointer;
+	}
+	.touch-device #menu-open div {
+	    background-color: black;
+	    border: 1px solid black;
+	    border-radius: 2px 2px 2px 2px;
+	    height: 15%;
+	    margin-bottom: 15%;
+	    width: 90%;
+	}
+	.touch-device .about{
+		width: auto;
+		display: none;
+	}
+/* Real mobile styles for smaller screens */
+@media only screen and (max-width: 768px) {
 	body, html{
 	position: relative;
 		width: 100%;
 	}
-	div#background-site{
+	#background-site{
 		-webkit-overflow-scrolling:touch; 
 		overflow:auto;
 	}
-	div#background-site iframe{
+	#background-site iframe{
 		width: 100%;
 		height: 5500px;
 		overflow: hidden;
 	}
-	div#menu {
+	#menu {
 		position: fixed;
-		width:100%;
 		font-size: 16px;
 		line-height: 22px;
 		padding: 10px;
@@ -139,26 +186,24 @@ div.about{
         right: 2px;
 		top: 2px;
 	}
-	img#logo{
-		position: fixed;
-		left:50%;
-		top:10px;
-		margin-left: -80px;
-		width:160px;
-		margin: left:10%;
+	#logo{
+        display: none;
 	}
-	ul#navigation{
+    #logo-touch {
+        display: block;
+    }
+	#navigation{
 		display: none;
 		text-indent: -1.5em;
 		margin-left:1.5em; 
 		margin-top: 20px;
 	}
-	div#menu-open{
+	#menu-open{
 		width: 30px;
 		height: 35px;
 		cursor: pointer;
 	}
-	div#menu-open div {
+	#menu-open div {
 	    background-color: black;
 	    border: 1px solid black;
 	    border-radius: 2px 2px 2px 2px;
@@ -166,9 +211,7 @@ div.about{
 	    margin-bottom: 15%;
 	    width: 90%;
 	}
-	.border{
-	}
-	div.about{
+	.about{
 		width: auto;
 		display: none;
 	}
