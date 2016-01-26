@@ -48,6 +48,8 @@ $(function() {
 	//mobile hack
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		mobile = true;
+        // Add body class to target styles for touch devices with CSS
+        $('body').addClass('touch-device');
 	}
 
 });
