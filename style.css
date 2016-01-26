@@ -111,8 +111,50 @@ body {
 	top: 155px;
 }
 
+/* Psuedo mobile styles for wide touch devices */
+    .touch-device #menu {
+        position: fixed;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 10px;
+        z-index:10;
+        left: 2px;
+        right: 2px;
+        top: 2px;
+    }
 
-/* @group mobile */
+	.touch-device #logo{
+		position: fixed;
+		left:50%;
+		top:10px;
+		margin-left: -80px;
+		width:160px;
+		margin: left:10%;
+	}
+	.touch-device #navigation{
+		display: none;
+		text-indent: -1.5em;
+		margin-left:1.5em;
+		margin-top: 20px;
+	}
+	.touch-device #menu-open{
+		width: 30px;
+		height: 35px;
+		cursor: pointer;
+	}
+	.touch-device #menu-open div {
+	    background-color: black;
+	    border: 1px solid black;
+	    border-radius: 2px 2px 2px 2px;
+	    height: 15%;
+	    margin-bottom: 15%;
+	    width: 90%;
+	}
+	.touch-device .about{
+		width: auto;
+		display: none;
+	}
+/* Real mobile styles for smaller screens */
 @media only screen and (max-width: 768px) {
 	body, html{
 	position: relative;
