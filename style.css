@@ -58,6 +58,15 @@ body {
 	top: 60px;
 	width: 300px;
 }
+    #logo-touch {
+        display: none;
+		position: absolute;
+		left:50%;
+		top:4px;
+		margin-left: -80px;
+		width:160px;
+		margin: left:10%;
+    }
 
 #binder-clip{
 	margin-top: -38px;
@@ -124,13 +133,11 @@ body {
     }
 
 	.touch-device #logo{
-		position: fixed;
-		left:50%;
-		top:10px;
-		margin-left: -80px;
-		width:160px;
-		margin: left:10%;
+        display: none;
 	}
+	.touch-device #logo-touch{
+        display: block;
+    }
 	.touch-device #navigation{
 		display: none;
 		text-indent: -1.5em;
@@ -180,13 +187,11 @@ body {
 		top: 2px;
 	}
 	#logo{
-		position: fixed;
-		left:50%;
-		top:10px;
-		margin-left: -80px;
-		width:160px;
-		margin: left:10%;
+        display: none;
 	}
+    #logo-touch {
+        display: block;
+    }
 	#navigation{
 		display: none;
 		text-indent: -1.5em;
