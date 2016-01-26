@@ -48,15 +48,6 @@ $(function() {
 	//mobile hack
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		mobile = true;
-
- 		//setup the iframe width resize
-		$("iframe").css( "width",$(window).width()-50+"px" );
-		$("#menu").css( "width",$(window).width()-30+"px" );
-		$( window ).resize(function() {
-	  		$("iframe").css( "width",$(window).width()-50+"px" );
-	  		$("#menu").css( "width",$(window).width()-30+"px" );
-		});
-
 	}
 
 });
