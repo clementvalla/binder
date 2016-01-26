@@ -40,9 +40,22 @@ $(function() {
 			$("#menu").toggleClass("border");
 		});
 
-		$( "#menu" ).draggable({ cancel: "li" });
+		$("#menu").draggable({ cancel: "li" });
     	// $( "div, p" ).disableSelection();
 	});
+
+    // Keep navigation from getting borked when dragged on wider views
+    // and reset it gracefully when transitioning to narrower views
+    // 768 matches the CSS mobile breakpoint, if you change it here
+    // change it in the CSS as well. Thanks!
+    $(window).resize(function() {
+        if(window.innerWidth < 768) {
+            $("#menu").draggable('disable').attr('style','');
+        } else if(window.innerWidth > 768) {
+            $("#menu").draggable('enable');
+            $("#navigation").attr('style','');
+        };
+    });
 	
 	//little fix for the iframe size on mobile
 	//mobile hack
