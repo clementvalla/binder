@@ -17,7 +17,6 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	min-width: 900px;
 }
 
 div#background-site {
@@ -114,7 +113,7 @@ div.about{
 
 
 /* @group mobile */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
 	body, html{
 	position: relative;
 		width: 100%;
@@ -130,7 +129,6 @@ div.about{
 	}
 	div#menu {
 		position: fixed;
-		width:100%;
 		font-size: 16px;
 		line-height: 22px;
 		padding: 10px;
